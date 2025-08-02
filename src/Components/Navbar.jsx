@@ -1,8 +1,10 @@
 import React from "react";
 import '../Style/Navbar.css';
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+    const navigate = useNavigate();
+
   return (
     <div className="header">
       <div className="nav">
@@ -25,10 +27,11 @@ const Navbar = () => {
             </NavLink>
           </div>
           <div className="page">
-            <NavLink to = "/booknow" className={({ isActive }) => (isActive ? "active" : "")}>
-              BookNow
-            </NavLink>
-          </div>
+          <button
+            className="bookbtn" onClick={() => navigate("/booknow")}>
+            Book Now
+          </button>
+        </div>
       </div>
     </div>
   );
