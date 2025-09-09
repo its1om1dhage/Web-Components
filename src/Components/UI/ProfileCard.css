@@ -1,0 +1,113 @@
+.profile-card {
+  max-width: 320px;
+  background: linear-gradient(145deg, #1e293b 0%, #334155 100%);
+  border: 1px solid #475569;
+  border-radius: 16px;
+  padding: 24px;
+  color: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  margin: 20px;
+  position: relative;
+}
+
+.profile-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(145deg, #475569, #334155);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.profile-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-color: #64748b;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #64748b;
+  margin-bottom: 16px;
+  object-fit: cover;
+  background: #475569;
+}
+
+.profile-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #f1f5f9;
+}
+
+.profile-title {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin: 0;
+  font-weight: 400;
+}
+
+.profile-bio {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.profile-skills h3 {
+  font-size: 1.1rem;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.skill-tag {
+  background: rgba(255,255,255,0.2);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+.profile-social {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.social-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+  background: rgba(255,255,255,0.2);
+}

@@ -5,7 +5,7 @@ import Navbar from './Components/Navbar';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Collections from './Pages/Collections';
-import BookNow from './Pages/BookNow';
+import Templates from './Pages/Templates';
 
 const router = createBrowserRouter(
   [
@@ -34,11 +34,11 @@ const router = createBrowserRouter(
       </div>
     },
     {
-      path: "/booknow",
+      path: "/templates",
       element:
       <div>
         <Navbar/>
-        <BookNow/>
+        <Templates/>
       </div>
     }
   ]
