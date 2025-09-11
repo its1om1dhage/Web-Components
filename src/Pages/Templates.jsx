@@ -212,12 +212,12 @@ export default LoginForm;`
   };
 
   return (
-    <div className="container" style={{ paddingTop: '24px', paddingBottom: '48px' }}>
-      <header style={{ marginBottom: '40px' }}>
-        <h1 className="text-gradient" style={{ marginBottom: '12px' }}>
+    <div className="max-w-6xl mx-auto px-5 pt-6 pb-12">
+      <header className="mb-10">
+        <h1 className="text-gradient mb-3">
           Component Library
         </h1>
-        <p style={{ fontSize: '16px', color: '#94a3b8', maxWidth: '600px' }}>
+        <p className="text-base text-text-muted max-w-2xl">
           Copy and paste components to accelerate your development workflow.
         </p>
       </header>
@@ -245,49 +245,25 @@ export default LoginForm;`
               <div 
                 key={template.id}
                 onClick={() => setSelectedTemplate(template)}
-                style={{ 
-                  background: '#1e293b',
-                  border: selectedTemplate?.id === template.id ? '1px solid #6366f1' : '1px solid #334155',
-                  padding: '20px', 
-                  borderRadius: '8px', 
-                  color: 'white',
-                  cursor: 'pointer',
-                  transition: 'all 0.15s ease',
-                  boxShadow: selectedTemplate?.id === template.id ? '0 4px 16px rgba(99, 102, 241, 0.1)' : '0 2px 8px rgba(0,0,0,0.1)'
-                }}
+                className={`bg-slate-800 border p-5 rounded-lg text-white cursor-pointer transition-all duration-150 ${
+                  selectedTemplate?.id === template.id 
+                    ? 'border-blue-500 shadow-lg shadow-blue-500/10' 
+                    : 'border-slate-700 hover:border-slate-600'
+                }`}
                 onMouseEnter={(e) => {
                   e.target.style.transform = 'translateY(-1px)';
-                  e.target.style.borderColor = '#64748b';
                 }}
                 onMouseLeave={(e) => {
                   e.target.style.transform = 'translateY(0)';
-                  e.target.style.borderColor = selectedTemplate?.id === template.id ? '#6366f1' : '#334155';
                 }}
               >
-                <div style={{ fontSize: '1.5rem', marginBottom: '12px' }}>
-                  {template.icon}
-                </div>
-                <h3 style={{ fontSize: '1.1rem', marginBottom: '8px', fontWeight: '600' }}>
-                  {template.name}
-                </h3>
-                <p style={{ 
-                  fontSize: '0.875rem', 
-                  color: '#94a3b8',
-                  marginBottom: '8px',
-                  lineHeight: '1.4'
-                }}>
+                <div className="text-2xl mb-3">{template.icon}</div>
+                <h3 className="text-lg mb-2 font-semibold">{template.name}</h3>
+                <p className="text-sm text-slate-400 mb-3 leading-snug">
                   {template.description}
                 </p>
                 {selectedTemplate?.id === template.id && (
-                  <div style={{ 
-                    marginTop: '12px', 
-                    padding: '8px 12px', 
-                    background: '#6366f1', 
-                    borderRadius: '4px',
-                    textAlign: 'center',
-                    fontSize: '0.75rem',
-                    fontWeight: '500'
-                  }}>
+                  <div className="mt-3 px-3 py-2 bg-blue-600 rounded text-xs font-medium text-center">
                     ✓ Selected
                   </div>
                 )}

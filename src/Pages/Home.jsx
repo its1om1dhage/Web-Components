@@ -2,32 +2,17 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className="container" style={{ paddingTop: '40px', paddingBottom: '60px' }}>
+    <div className="max-w-6xl mx-auto px-5 pt-10 pb-15">
       {/* Hero Section */}
-      <section style={{ textAlign: 'center', marginBottom: '80px' }}>
-        <h1 className="text-gradient" style={{ marginBottom: '16px' }}>
+      <section className="text-center mb-20">
+        <h1 className="text-gradient mb-4">
           Component Library
         </h1>
-        <p style={{ 
-          fontSize: '16px', 
-          color: '#94a3b8', 
-          maxWidth: '520px', 
-          margin: '0 auto 32px',
-          lineHeight: '1.6'
-        }}>
+        <p className="text-base text-text-muted max-w-lg mx-auto mb-8 leading-relaxed">
           A collection of reusable React components and templates. 
           Copy, paste, and customize to speed up your development.
         </p>
-        <div style={{
-          display: 'inline-flex',
-          padding: '8px 16px',
-          background: 'rgba(99, 102, 241, 0.1)',
-          border: '1px solid rgba(99, 102, 241, 0.2)',
-          borderRadius: '20px',
-          color: '#a5b4fc',
-          fontSize: '14px',
-          fontWeight: '500'
-        }}>
+        <div className="inline-flex px-4 py-2 bg-primary/10 border border-primary/20 rounded-2xl text-indigo-300 text-sm font-medium">
           ✨ Copy & paste ready
         </div>
       </section>
